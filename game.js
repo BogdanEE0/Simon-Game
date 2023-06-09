@@ -30,6 +30,7 @@ function drawPattern(index){
 function nextLevel(){
     level++;
     $(document).off("keydown", nextLevel);
+    $("h1").off("click", nextLevel);
     $("div.btn").off("click", clickHandle);
     $("h1").text("Level " + level);
     getRandomColor();
@@ -65,3 +66,4 @@ function clickHandle(evt) {
 }
 
 $(document).on("keydown", nextLevel);
+$("h1").on("click", nextLevel);
